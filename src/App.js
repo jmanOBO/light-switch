@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import on from "./images/ONbulb.jpg"
+import off from "./images/OFFbulb.jpg"
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [isOn,setIsOn]=useState(false);
+
+
+  const handleOnclick=()=>{
+    setIsOn(!isOn);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+       {/* Place the 2 images here...*/}
+
+       <img src={on} alt="on" style={{display: isOn?"block":"none"}}/> 
+       <img src={off} alt="off" style={{display: isOn?"none":"block"}}/>
+       <button className="button"  onClick={handleOnclick}>Turn On / Off</button>
+
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default App
