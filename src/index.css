@@ -16,6 +16,9 @@ button.button{
   border: none;
   outline: none;
 }
+.info{
+  margin-top: 20px
+}
 button.button:focus, button.button:hover{
  border: 1px solid brown;
 }

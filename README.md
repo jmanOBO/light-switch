@@ -1,1 +1,1 @@
-A simple ON and OFF  Switch in react 
+A simple ON and OFF  Switch in react including a dynamic text just for fun.
